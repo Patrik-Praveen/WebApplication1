@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "StepChart";
+}
+
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+
+<!-- END PAGE LEVEL PLUGINS -->
+
+<style>
+    a:link, a:visited {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+<script src="~/Scripts/charts/StepChart.js"></script>
+<div style="margin-top:80px;">
+    <div class="row div-backgroudcolor">
+        <div class="col-sm-12 col-md-12 col-xs-12 padding-left-0" style="padding-bottom:7%">
+            <div id="trendgraphs">
+                <div class="pane equal" style="background-color:#EDF0F5;">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 padding-left-0">
+                        <div class="col-sm-12 col-md-12 col-xs-12">
+                            <div class="row background-colorWhite">
+                                <div class="col-xs-12">
+                                    <div class="col-sm-12 col-md-12 col-xs-12 padding-right-0">
+                                    </div>
+                                </div>
+                                <div class="center-block col-sm-12 col-md-12 col-xs-12 cursor-pointer">
+                                    
+                                    <div id="chartClaim" class="chart normal charthover margin-bottom-15 chart-height openModal"></div>
+                                    <div class="chartBottomHeading">Chart Heading</div>
+                                    <img id="img-chartTotalClaim" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    
+</div>

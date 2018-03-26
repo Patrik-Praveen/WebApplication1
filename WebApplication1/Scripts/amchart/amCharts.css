@@ -1,0 +1,29 @@
+﻿.amcharts-label text
+{
+    color:red !important; 
+}
+.amcharts-bg
+{
+    color:red !important;
+}
+
+
+g.negative path.amcharts-graph-column-front {
+    fill: url(#negativeHatch);
+}
+
+g.positive path.amcharts-graph-column-front {
+        fill: url(#positiveHatch);
+}
+
+
+.graph-conditions 
+{
+    position: relative;
+    list-style: none;
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url( 'data:image/svg+xml;base64,PHN2ZyBpZD0ic3ZnIiBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCA3Ni40NiAxOTMuNzYiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMmYzYTQyO30uY2xzLTJ7b3BhY2l0eTowLjY7ZmlsbDp1cmwoI2xpbmVhci1ncmFkaWVudCk7fTwvc3R5bGU+PGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQiIHgxPSI1OS44MSIgeTE9IjEwLjcxIiB4Mj0iNTkuODEiIHkyPSIxNTkuMSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHRpdGxlPmljb24tYmxhbmstcGVyc29uPC90aXRsZT48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik02NC40OSw0Ni44M0gxMS44N0ExMS44NywxMS44NywwLDAsMCwwLDU4Ljd2NTMuOTJIMTMuNjJWNjdIMTcuM1YxOTMuNzZoMTlWMTI0LjRINDB2NjkuMzZINTkuMjFWNjdoMy42OHY0NS42Mkg3Ni4zNlY1OC43QTExLjg3LDExLjg3LDAsMCwwLDY0LjQ5LDQ2LjgzWiIvPjxjaXJjbGUgY2xhc3M9ImNscy0xIiBjeD0iMzguMTgiIGN5PSIyMi42MyIgcj0iMTguNDEiLz48cmVjdCBjbGFzcz0iY2xzLTIiIHg9IjM4LjE4IiB3aWR0aD0iNDMuMjciIGhlaWdodD0iMTk1Ljc2Ii8+PC9zdmc+' );
+}

@@ -1,0 +1,2020 @@
+﻿/* Override base theme stylesheet */
+.header, .navbar-header {
+    height: 65px;
+    background-color: #0c4977 !important;
+}
+
+.header-navbar .navbar-toggle {
+    height: 65px;
+    line-height: 65px;
+}
+
+.header-navbar .navbar-nav > li > a, .header-navbar .navbar-nav > li > a:hover {
+    border-color: grey !important;
+    color: #fff;
+}
+
+.logo {
+    height: 65px;
+    line-height: 60px;
+}
+
+.sidebar-switch, .sidebar-switch:hover {
+    height: 65px;
+    line-height: 65px;
+}
+
+.sidebar-toggle .sidebar-switch {
+    color: #fff;
+}
+
+.sidebar-switch .fa {
+    font-size: 20px;
+}
+
+.header-navbar .navbar-nav > li > a {
+    padding: 10px 10px;
+}
+
+.navbar-nav > li > a {
+    line-height: 45px;
+}
+
+.sidebar {
+    top: 65px;
+    background-color: #fff;
+}
+
+    .sidebar .tab-nav {
+        height: 59px;
+    }
+
+        .sidebar .tab-nav > li > a {
+            padding: 18px;
+        }
+
+        .sidebar .tab-nav > li.active > a {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+
+.tab-nav .fa {
+    font-size: 20px;
+}
+
+.sidebar .tab-nav > li.active {
+    border-bottom: 5px solid #003366;
+}
+
+.sidebar .tab-nav > li {
+    border-bottom: 1px solid #003366;
+    background-color: #3897d3;
+}
+
+.sidebar-profile {
+    background-color: #3997d4;
+    background-image: none;
+}
+
+.sidebar-nav > li {
+    border-color: grey !important;
+}
+
+.sidebar .tab-nav > li > a,
+.sidebar .tab-nav > li > a:hover,
+.sidebar .tab-nav > li.active > a,
+.sidebar .tab-nav > li.active > a:hover {
+    color: #fff;
+    background-color: #57a9db;
+}
+
+.sidebar-nav > li > a:hover {
+    background-color: #fff;
+}
+
+.sidebar-nav > li > a, .sidebar-nav ul > li > a {
+    color: #000000;
+}
+
+.sidebar-content h4 {
+    background-color: inherit;
+}
+
+.container-fluid {
+    padding-top: 5px;
+   /*background-color:#22262E;*/
+}
+
+.breadcrumb {
+    background-color: transparent !important;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+    list-style:none;
+}
+
+    .breadcrumb li a {
+        color: #ffffff;
+        font-size: 12px;
+    }
+/**************** END ******************/
+
+/*************** Agency Dropdown ************/
+#agency-list {
+    padding-top: 15px;
+    width: 130px;
+}
+
+    #agency-list .form-control {
+        height: auto;
+        /*height:20px;*/
+    }
+
+    #agency-list .dropdown-toggle.btn {
+        padding: 0px;
+    }
+
+    #agency-list .dropdown-toggle.btn-default,
+    #agency-list .open > .dropdown-toggle.btn-default {
+        background-color: #0c4977;
+        color: #fff;
+    }
+
+    #agency-list .dropdown-menu,
+    #agency-list .default .dropdown-menu > li.selected > a,
+    #agency-list .default .dropdown-menu > li > a:hover,
+    #agency-list .default .dropdown-menu > .active > a {
+        /*background-color:inherit;*/
+    }
+
+        #agency-list .dropdown-menu > li > a, .dropdown-menu > li > a:hover {
+            color: #000;
+        }
+
+/********************** Client Dropdown ***********************/
+#client-list {
+    width: 130px;
+}
+
+    #client-list .form-control {
+        height: auto;
+    }
+
+    #client-list .dropdown-toggle.btn {
+        padding-left: 0px;
+    }
+
+    #client-list .dropdown-toggle.btn-default,
+    #client-list .open > .dropdown-toggle.btn-default {
+        background-color: #3897d3;
+        color: #fff;
+    }
+
+    #client-list .dropdown-menu,
+    #client-list .default .dropdown-menu > li.selected > a,
+    #client-list .default .dropdown-menu > li > a:hover,
+    #client-list .default .dropdown-menu > .active > a {
+        /*background-color:inherit;*/
+    }
+
+        #client-list .dropdown-menu > li > a, .dropdown-menu > li > a:hover {
+            color: #000;
+        }
+
+/********************** Filters Dropdown ********************************/
+#filters .dropdown-toggle.btn-default,
+#filters .open > .dropdown-toggle.btn-default {
+    background-color: #666;
+    color: #fff;
+}
+
+#filters .dropdown-menu,
+#filters .default .dropdown-menu > li.selected > a,
+#filters .default .dropdown-menu > li > a:hover,
+#filters .default .dropdown-menu > .active > a {
+    background-color: inherit;
+}
+
+    #filters .dropdown-menu > li > a, .dropdown-menu > li > a:hover {
+        color: #000;
+    }
+
+.main {
+    padding-top: 65px;
+}
+
+.page-heading {
+    /*background-color: #399f39;
+    height: 50px;
+    line-height: 50px;*/
+    color: #fff;
+    /*padding: 0px 10px 0px 10px;*/
+}
+/*Starts Class added for page headng and active link variations by Patrik Praveen on Mar 16, 2017*/
+.totalClaim {
+    /*background-color: #22262E !important;*/
+}
+
+.active > a.dashboardLink, .active > a.dashboardLink:hover {
+   /*color: #4AB96D !important;*/
+    color: #666 !important;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.active > a.totalClaimLink, .active > a.totalClaimLink:hover {
+   color: #666 !important;
+    font-weight:bold;
+    font-size:13px;
+}
+.YearOverYear {
+    /*background-color: #e57d25 !important;*/
+}
+
+.active > a.yearOverYearLink, .active > a.yearOverYearLink:hover {
+    /*color: #e57d25 !important;*/
+     color: #666 !important;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.LargeClaim,.Prescription {
+    /*background-color: #e67d26 !important;*/
+}
+
+.active > a.largeClaimsLink, .active > a.largeClaimsLink:hover, .active > a.prescriptionDrugUsageLink, .active > a.prescriptionDrugUsageLink:hover  {
+    /*color: #e67d26 !important;*/
+     color: #666 !important;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.Demographics {
+    /*background-color: #e4b023 !important;*/
+}
+
+.active > a.demographicsLink, .active > a.demographicsLink:hover {
+    /*color: #e4b023 !important;*/
+     color: #666 !important;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.ProviderNetwrok {
+    /*background-color: #3897d3 !important;*/
+}
+
+.active > a.providerNetworksLink, .active > a.providerNetworksLink:hover {
+    /*color: #3897d3 !important;*/
+     color: #666 !important;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.HospitalUsage {
+    /*background-color: #E4B023 !important;*/
+}
+
+.active > a.hospitalUsageLink, .active > a.hospitalUsageLink:hover {
+    /*color: #E4B023 !important;*/
+     color: #666 !important;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.HealthCareCostDrivers {
+    /*background-color: #4AB96D !important;*/
+}
+
+.active > a.healthCareDriversLink, .active > a.healthCareDriversLink:hover {
+    /*color: #4AB96D !important;*/
+     color: #666 !important;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.PlanDesign {
+    /*background-color: #4B98D5 !important;*/
+}
+
+.active > a.planDesignLink, .active > a.planDesignLink:hover {
+    /*color: #4B98D5 !important;*/
+     color: #666 !important;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.HealthConditions {
+    /*background-color: #5CB96A !important;*/
+}
+
+.active > a.healthConditionsLink, .active > a.healthConditionsLink:hover {
+    /*color: #5CB96A !important;*/
+     color: #666 !important;
+    font-weight:bold;
+    font-size:13px;
+}
+
+
+
+/*End Class added for page headng variations by Patrik Praveen on Mar 16, 2017*/
+
+.page-heading .heading {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.page-heading .action {
+    font-size: 13px;
+}
+
+.page-heading .fa {
+    font-size: 20px;
+    vertical-align: middle;
+     padding-left: 5px;
+}
+
+.page-details {
+    padding: 10px 10px 5px 10px;
+    margin-top: 10px;
+}
+
+    .page-details h5 {
+        color:#0c4976;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.chart {
+    height: 400px;
+}
+
+.hospitalUsageBarChart {
+    height: 600px;
+}
+
+#filters .form-control {
+    height: auto !important;
+}
+
+#filters .btn-group.block .btn:first-child {
+    width: 100% !important;
+}
+
+#filters .dropdown-menu > li > a:hover {
+    color: inherit !important;
+}
+
+#filters .dropdown-menu > li > a {
+    color: inherit !important;
+}
+
+.header-navbar h6 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0px !important;
+    line-height: 1.1;
+}
+
+.header-navbar .navbar-nav > li:first-child > a {
+    border-left: none !important;
+    padding-top: 15px !important;
+    padding-bottom: 5px !important;
+}
+
+/*.sidebar .tab-nav>li.active a{padding-top:7px;}*/
+
+.sidebar-content h4 .btn {
+    margin-top: -2px;
+    padding-top: 3px !important;
+    padding-bottom: 5px !important;
+}
+
+.logo img {
+    width: 110px;
+}
+
+.client-name {
+    font-size: 14px;
+}
+
+@media print {
+    /* for printing out - assume 8.5x11inches  */
+    .container-fluid {
+        max-width: 800px;
+    }
+}
+
+
+.marginright {
+    margin-right: 80px !important;
+    float: none !important;
+}
+
+.main {
+    z-index: 0 !important;
+}
+
+#footer {
+    background-color: #fff;
+}
+
+#filters .filter-option {
+    padding-top: 0px !important;
+    line-height: 30px;
+}
+
+#filters .btn.btn-success.btn-xs.pull-right {
+    padding-left: 5px !important;
+}
+
+.action {
+    margin: 0px 10px 0px 2px !important;
+}
+
+#sidebartopheader .bootstrap-select > .btn.dropdown-toggle.selectpicker.btn-default {
+    padding-left: 0px !important;
+}
+
+#sidebartopheader .dropdown-menu > li > a:hover {
+    color: inherit !important;
+}
+
+.btn-group.open .dropdown-toggle {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+
+.active > a {
+    color: #FFFFFF !important;
+    font-weight: 500 !important;
+}
+
+    .active > a:hover {
+        color: #000000 !important;
+        font-weight: 500 !important;
+    }
+
+.hidden {
+    display: none;
+}
+
+
+
+.amcharts-graph-label>tspan
+{
+  /*font-size:25px;*/
+  font-weight:bold;
+}
+
+.amcharts-axis-label>tspan,.amcharts-pie-label>tspan,.amcharts-label>tspan,.legendlabelClass
+{
+    font-size:14px;
+    font-weight:bold;
+}
+
+.nav-tabs > li.active > a {
+    color: #fcfcfc !important;
+    background-color: #16a085 !important;
+}
+.amcharts-export-menu{
+    display:block;
+}
+
+
+.YearOverYear h2 {
+    border-bottom-color: transparent !important;
+    border-bottom: 0px !important;
+}
+
+.border-justified {
+    border-bottom: hidden !important;
+}
+
+.chart .normal {
+    margin: 0px;
+}
+
+.chartBottomHeading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    font-family: Arial;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.impactClass {
+    height: 95px;
+    width: 80%;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.small-button {
+    width: auto;
+}
+
+.tab-content {
+    background-color: #ffffff;
+}
+
+/*Common styles for Demographic charts starts Here Added by Andy Anuj on Mar 17, 2017*/
+.areaMapClass {
+    height: 500px;
+}
+
+.dependentDivBorder {
+    border-left: 1px solid; /*#e7e7e7*/
+}
+
+.spanbenchmark {
+    font-weight: 700;
+}
+
+.spanabove {
+    color: red;
+    font-weight: 700;
+}
+
+/*.divHeaderDemographic {
+    min-height: 100px;
+    max-height: max-content;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    display: grid;
+}*/
+
+.divHeader{
+    min-height: 100px;
+    max-height: max-content;
+    margin-top: 10px;
+    display:-webkit-box;
+    display:flow-root;
+}
+
+.agedivBorder {
+    padding-top: 18px;
+    border-top: 1px solid;
+}
+
+.areaDivBorder {
+    border-top: 1px solid;
+    /*margin-top: 25px;*/
+    padding-top: 15px;
+}
+
+.agetext-align {
+    text-align: center;
+}
+
+change classes .border-justified {
+    border-bottom: none !important;
+}
+
+.gender-text {
+    text-align: center;
+    font-size: 16px;
+}
+
+.close {
+    float: right !important;
+    margin-right: -18px !important;
+    margin-top: -15px !important;
+    background-color: white !important;
+    border-radius: 15px !important;
+    width: 30px !important;
+    height: 30px !important;
+    opacity: 1 !important;
+}
+
+    .close:hover {
+        background-color: red !important;
+        color: white;
+        font-weight: bold;
+        border-radius: 15px !important;
+        width: 30px !important;
+        height: 30px !important;
+        opacity: 0.9 !important;
+    }
+
+    .close:active {
+        position: relative;
+        top: 1px;
+    }
+
+
+.applyfilter-btn {
+    min-width:56px;
+    width:auto;
+    /*width: 40%;*/
+}
+
+/*Start Class added for styling in table format by Patrik Praveen on Mar 16, 2017*/
+.age-gender-table {
+    width: 100%;
+    height: 100%;
+}
+
+    .age-gender-table tr {
+        line-height: 3;
+    }
+
+    .age-gender-table .col1 {
+        width: 50%;
+        text-align: left;
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .age-gender-table .col2, .age-gender-table .col3 {
+        width: 25%;
+        text-align: center;
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+.tableFormat {
+    width: 65%;
+    margin-top: 5%;
+    margin-left: 18%;
+    margin-right: 15%;
+}
+
+    .tableFormat tr td {
+        text-align: center;
+    }
+
+.tablerowbg tr:nth-child(odd) /* even odd color */ {
+    background-color: #edf0f5;
+}
+
+.tablerowbg tr:nth-child(even) /* even odd color */ {
+    background-color: #FFFFFF;
+}
+
+.hospitalUsagetablerowbg tr:nth-child(odd) /* even odd color */ {
+    background-color: #FFFFFF;
+}
+
+.hospitalUsagetablerowbg tr:nth-child(even) /* even odd color */ {
+    background-color: #999999;
+    color:#000000;
+}
+
+/*End Class added for styling in table format by Patrik Praveen on Mar 16, 2017*/
+
+.agegroupLabel {
+    padding-left: 10px;
+    height: 40px;
+    color: black;
+    font-weight: 500;
+}
+
+/*Common styles for amCharts Starts Here Added by Patrik Praveen on Mar 14, 2017*/
+
+.normal .amcharts-axis-zero-grid {
+    stroke: transparent;
+    stroke-opacity: 0;
+}
+
+.clearPadding {
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+}
+
+
+.amcharts-axis-label, .amcharts-axis-label tspan, .amcharts-legend-label tspan, .amcharts-graph-label tspan, .amcharts-legend-label, .amcharts-graph-label,.legendlabelClass {
+    font-family: "Helvetica Neue","Helvetica","Arial","sans-serif";
+}
+
+.charthover .amcharts-axis-label{
+    cursor: pointer !important;
+}
+
+
+.amcharts-graph-bullet {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.amcharts-graph-g1 .amcharts-graph-fill {
+    filter: url(#blur);
+}
+
+.amcharts-graph-g2 .amcharts-graph-fill {
+    filter: url(#blur);
+}
+
+.amcharts-cursor-fill {
+    filter: url(#shadow);
+}
+/*Common styles for amCharts Ends Here Added by Patrik Praveen on Mar 14, 2017*/
+.divProviderNetworkBar {
+    width: 98%;
+    position: center;
+    align-content: center;
+    height: 600px;
+    text-align: center;
+    margin: 0 auto;
+    margin-right:0px;
+}
+
+.chartDataNotAvaliable {
+    text-align: center;
+      justify-content: center;
+     align-items: center;
+      display: flex;
+      font-weight: 400;
+}
+
+.chartDataNotAvaliableText {
+    font-weight: 900;
+    padding-right: 16.6%;
+    color: black;
+    margin-left: 2%;
+}
+
+
+.tab-heading
+{
+min-width:100px;
+width:auto;
+}
+.totalClaimtabHeading .tab-heading
+{
+min-width:100px;
+width:auto;
+}
+
+.networkTable{
+    /*min-width:100%;*/
+    width:auto;
+}
+
+.chartDataNotAvaliableTextMargin{
+     margin-bottom:-1.5%;
+}
+
+.chartDemographic-Margintop{
+     margin-top:-1.5%
+}
+.chartdemographic-depedentheight{
+    height:210px;
+}
+
+.providerNetwork-close{
+    margin-top:3%;
+}
+.sectionHeight
+{
+    min-height:318px;
+    height:auto;
+    padding:30px;
+}
+
+.sectionHeight p{
+    color:white;
+}
+.claim-height
+{
+    height:auto;
+}
+.claim-height .totalClaimchart
+{
+    margin-top:25%;
+    margin-bottom:25%;
+}
+.margin-bottom-1{
+    margin-bottom:1%;
+}
+
+.HospitalUsageColorRed{
+    color:red;
+}
+
+.HospitalUsageColorGreen{
+    color:green;
+}
+
+.HospitalUsageTextCenter{
+    text-align:center;
+    font-weight: 400;
+    color: black;
+    font-size: 22px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.HospitalUsageImage{
+    width:60px;
+    height:50px;
+}
+
+/*Class added for blockUi message by Patrik Praveen on Mar 30, 2017*/
+.waitMessage {
+    color: #22262e;
+    font-weight: 300;
+    font-size: 46px;
+    line-height: 2;
+}
+.margin-top-5{
+    margin-top:5%;
+}
+.padding-left-2{
+    padding-left:2%
+}
+
+.hospitalUsage-table {
+    width: 100%;
+}
+.width-70{
+    width:70%;
+}
+
+.imgClass{
+
+    vertical-align:bottom;
+    bottom:0px;
+}
+
+.padding-top-bottom{
+    padding-top:20%;
+    padding-bottom:20%;
+    /*margin:15px;
+    margin-left:15px !important;
+    margin-right:15px !important;*/
+}
+.top404,.middle404,.bottom404{
+   /*width:100%;*/
+  margin-bottom:50px !important;
+  font-family:Arial, Helvetica, sans-serif;
+  color:grey;
+}
+
+.top404
+{
+    font-size: 10em;
+     /*margin-left:25%;
+   margin-right:25%;*/
+   margin-bottom:20px;
+   font-weight:bold;
+    color:black;
+}
+.middle404
+{
+    font-size: 4em;
+    margin-top:20px;
+     /*margin-left:25%;
+   margin-right:25%;*/
+   margin-bottom:20px;
+}
+
+.bottom404
+{
+    font-size: 1.5em;
+    margin-top:20px;
+     /*margin-left:25%;
+   margin-right:25%;*/
+   margin-bottom:20px;
+}
+
+.margin-bottom-2{
+    margin-bottom:2%;
+}
+.cls-1{
+    fill:khaki;
+}
+
+#piechatTotal .amcharts-pie-slice {
+    cursor : pointer;
+}
+.filterHeight{
+    min-height:350px; max-height:350px;
+}
+.padding-0{
+    padding-left: 0px;
+     padding-right:0px
+}
+
+.amcharts-legend-marker {
+    cursor:pointer;
+}
+/*Class Added set margin left 6px on Andy Anuj on April 21, 2017*/
+.padding-left-4{
+   padding-left: 4px;
+}
+
+
+.field-validation-error {
+    color: #ff0000;
+}
+
+#lnkActionItem
+{
+    text-decoration:none;
+    color:white;
+}
+a:hover {
+   text-decoration:none;
+   cursor:pointer;
+}
+.success_msg {
+    color:green;
+}
+
+.notifications > li {
+    border-bottom-color: #292d37;
+}
+
+.notifications a {
+    color: #000000;
+}
+
+.notifications span {
+    color: #000000;
+}
+
+.notifications .icon {
+    background-color: #FFFFFF;
+}
+
+.notifications a h6 {
+    color: #000000;
+}
+
+.notificationCountDiv{
+    position:relative; float:right; margin-left:-20px; margin-top:-10px; background-color:red; color:white; font-size:small; height:20px; width:20px;
+}
+
+.round-button {
+	width:100%;
+}
+.round-button-circle {
+width: 60px;
+height: 60px;
+padding-bottom: 50%;
+border-radius: 50%;
+overflow: hidden;
+   margin-top: 20%;
+margin-left: 15%;
+    background: #ff9900; 
+    /*box-shadow: 0 6px 5px #888888;*/
+   /* box-shadow: 0 5px 5px #ffffff, 0 4px 4px #888888;*/
+}
+.round-button-circle-back {
+ width: 85px;
+ height:0;
+ padding-bottom: 100%;
+    border-radius: 50%;
+    overflow:hidden;
+    margin-top: -20px;
+    margin-right: -4px;
+    background: #ffffff; 
+}
+.round-button-circle:hover {
+ background:#ff9900;
+}
+.round-button a {
+    display:block;
+	float:left;
+	width:100%;
+	padding-top:50%;
+    padding-bottom:50%;
+	line-height:1em;
+	margin-top:-0.5em;
+    
+	text-align:center;
+	color:#e2eaf3;
+    font-family:Verdana;
+    font-size:1em;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+#search {
+height: 20%;
+width:auto;
+position: fixed;
+background: #fff;
+left: -100%;
+bottom:0px;
+ }
+
+
+.theme-options {
+    box-shadow:none !important;
+    background-color:transparent !important;
+    opacity: 1;
+    padding: 0px;
+    right: 0;
+    bottom:130px !important;
+    transition: opacity 0.3s ease 0s, right 0.3s ease 0s;
+    width: auto;
+    z-index: 98;
+    top:inherit;
+    height:44px;
+}
+.button-switch.style {
+    right: 0 !important;
+    left: inherit !important;
+    bottom: 50px !important;
+    background-color: transparent !important;
+    top: -10px;
+    width: auto;
+    height: 100px;
+    width: 85px;
+}
+.change-position
+{
+    right:0 !important;
+    left:inherit !important;
+    bottom:50px !important;
+    background-color:transparent !important;
+    top:-40px;
+    width:auto;
+}
+#searchFilter {
+    /* box-shadow: -3px 0 10px 0 rgba(50, 50, 50, 0.5); */
+    border-radius: 50%;
+    margin-right: 75px;
+    background-color: graytext !important;
+    font-size:11px;
+}
+
+.tag.label.label-info
+{
+       background-color:#666666 !important;
+}
+
+.popover-content{
+    color:black;
+}
+
+
+#actionItemsList {display: none;}
+
+.ui-effects-wrapper
+{
+    width:auto;
+    height:auto;
+}
+
+.h-center {
+  text-align: center;
+  margin-top:8px;
+  color:black;
+  font-size:20px;
+}
+
+.v-center span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.action-item{
+    padding-left:1%;
+    background-color:#ff9900;
+    border-radius:25px;
+    margin-left: 5%;
+    padding: 0.35% 0.5% 0.5% 0.5%;
+    line-height:1em;
+    vertical-align:middle;
+    cursor: pointer;
+}
+.div-backgroudcolor{
+    background-color:#EDF0F5
+}
+.chart-heading{
+    background-color:#999999;
+    font-size: 16px;
+    color:white;
+    line-height:42px;
+    padding-left:0px;
+    font-weight:400;
+    border:1px solid #ffffff;
+    height:42px;
+}
+round-button-circle a:link,round-button-circle a:visited
+{
+    color :transparent !important;
+}
+
+.page-membership-bg{
+    background-color: #003466;
+}
+.chart-downloadtext{
+    font-size:12px;
+  /*padding-left:50%;*/
+  text-align: right;
+}
+.background-colorWhite{
+    background-color: white;
+    -webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);
+}
+.color-white{
+    color: #ffffff;
+}
+.action-HeaderBgColor{
+    background-color:#033668;
+}
+.padding-right-18{
+    padding-right:18px;
+}
+.margin-bottom-15{
+    margin-bottom:15px;
+}
+.margin-top-18{
+    margin-top:18px;
+}
+.padding-left-0{
+    padding-left:0px;
+}
+.padding-right-0{
+    padding-right : 0px;
+}
+.margin-bottom-0{
+    margin-bottom:0px !important;
+}
+.padding-right-4{
+    padding-right:4px;
+}
+.padding-left-10{
+    padding-left: 10px;
+}
+.stepChart-shadow {
+    -webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);
+}
+.padding-top-1 {
+    padding-top: 1%;
+}
+
+.padding-bottom-1 {
+    padding-bottom: 1%;
+}
+
+.height-455 {
+   min-height: 455px;
+   height: auto;
+}
+.padding-top-4 {
+    padding-top: 4%;
+}
+.padding-top-0 {
+    padding-top: 0px;
+}
+.padding-top-15 {
+    padding-top: 15px;
+}
+.line-height-0 {
+    line-height: 0px;
+}
+.header-style {
+    height: 50px;
+    vertical-align: middle;
+    padding-top: 14px;
+}
+.chart-height {
+    height: 350px;
+}
+.chart-PrintIcon {
+    background-color: #0EA7ED;
+    background-position: center;
+    border-radius: 18px;
+    height: 31px;
+    width: 31px !important;
+    padding: 7px 0 0 1px;
+    vertical-align: middle;
+    margin: 5px 8px 0 -5px;
+    display: block;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    cursor: pointer;
+      -webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.5);
+}
+.padding-right-22 {
+    padding-right: 22px;
+}
+.padding-right-10 {
+    padding-right: 10px;
+}
+.padding-right-20 {
+    padding-right: 20px;
+}
+.padding-left-12 {
+    padding-left: 12px;
+}
+.padding-bottom-2 {
+    padding-bottom: 2%;
+}
+.chartPrintText {
+    padding-right: 10px;
+    vertical-align: middle !important;
+    padding-bottom: 18px;
+       display: inline-block;
+    vertical-align: middle;
+    line-height: 1em; 
+}
+
+.padding-left-5 {
+    padding-left: 5%;
+}
+
+.printPopup-ChartList {
+    min-height: 335px;
+    height: auto;
+    border: 1px groove #A6A6A6;
+    /*margin-top: -15px !important;*/
+}
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+.btn-GeneratePdf {
+    border: 1px solid gray;
+    border-radius: 3px;
+    color: black;
+    background-color: white;
+}
+
+.popupChartList-Header {
+    background-color: #333F4F;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.arrowRight {
+    width: 80px;
+    /*padding-top:100%;*/
+    margin-left: 30px;
+}
+
+.lineRight {
+    margin-top: 10px;
+    width: 40px;
+    background: #A6A6A6;
+    height: 2px;
+    float: left;
+}
+
+.pointRight {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #A6A6A6;
+    float: right;
+    margin-right: 30px;
+}
+
+.arrowLeft {
+    width: 80px;
+    padding-top: 25px;
+}
+
+.lineLeft {
+    margin-top: 8px;
+    width: 40px;
+    background: #A6A6A6;
+    height: 2px;
+    float: right;
+}
+
+.pointLeft {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid #A6A6A6;
+    float: left;
+    margin-left: 32px;
+}
+
+.selectedChartCount {
+    position: relative;
+    float: right;
+    margin-left: -30px;
+    margin-top: 5px;
+    background-color: red;
+    color: white;
+    font-size: small;
+    line-height: 20px;
+    width: 20px;
+    border-radius: 18px;
+    margin-right: 10px;
+}
+
+.ChartName-Border {
+    border-bottom: 1px dotted #A6A6A6;
+}
+
+.printListBoxDesign {
+    height: 325px;
+    min-width: 100%;
+    overflow-y: scroll;
+}
+
+.selectedChart {
+    font-size: 13px;
+    height: 330px !important;
+    overflow-y: scroll;
+    min-width: 100% !important;
+}
+
+.printModelChart {
+    border: 1px groove white !important;
+    border-radius: 5px !important;
+}
+.height-415{
+    height: 415px !important;
+}
+.modal-header {    
+    padding: 5px;
+}
+
+.name{
+    color:white;
+    font-weight:400;
+    font-family:inherit;
+    width:130px;
+}
+.popup-close{
+    margin-top:1%;
+   margin-bottom: -2%;
+}
+.height-325{
+     height : 325px !important;
+}
+.width-60{
+    width : 60% !important;
+}
+/*Added by amit on may 31, 2017*/
+.hospitalUsage-TableText{
+    line-height:50px;
+    font-size : 14px;
+    font-weight : 500;
+}
+.hospitalUsagePrintIcon{
+   margin-top: 8px;
+margin-bottom: 5px;
+color: black;
+height: 25px;
+vertical-align: middle !important;
+line-height: 1.5em;
+border-radius:5px;
+padding-right:3px;
+font-size: 12px;
+padding-top:2px;
+cursor : pointer;
+/*padding-left:5px;*/
+}
+.margin-top-15{
+    margin-top:15px;
+}
+.padding-left-2{
+    padding-left: 2px;
+}
+.height-382{
+    height:382px !important;
+}
+
+.img-circle
+{
+    height:70px !important;
+    width: 70px !important;
+}
+
+.y {
+    /*vertical-align:top;*/
+    /*display: inline-block;*/
+    height:auto;
+}
+.dashboard{
+    padding-top: 7px;
+    height: 5em;
+    vertical-align: middle;
+}
+.AgeGenderColor
+{
+color :red;
+font-weight:bold;
+}
+
+.jspPane {
+ overflow-x: hidden;
+ left: 0 !important;
+}
+
+.margin-top-1 {
+    margin-top: 1%;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+
+
+
+/*---- Print PDF ------*/
+.padding-left-20{
+    padding-left:20px;
+}
+
+.print-page-heading{    
+    height:50px;
+    color: #fff;
+    font-size: 25px;
+    text-align:center;
+}
+
+.print-blue {
+    background-color:#3997D4;
+}
+.print-orange {
+    background-color:#e57d25;
+}
+.print-green {
+    background-color:#4bb96d;
+}
+.print-yellow {
+    background-color:#e4b023;
+}
+
+.print-menu-container
+{
+    width:190px; float:left;
+}
+
+.print-sidebar-nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-top:20px;
+    padding-left:10px;
+}
+
+.print-sidebar-nav li
+{
+    margin-bottom: 5px;
+}
+.print-sidebar-nav li.blue {
+    color: #3997D4;
+}
+.print-sidebar-nav li.orange {
+    color: #e57d25;
+}
+.print-sidebar-nav li.green {
+    color: #4bb96d;
+}
+.print-sidebar-nav li.yellow {
+    color: #e4b023;
+}
+
+.print-wrapper
+{
+    width:1200px; 
+    margin:auto;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.print-preview
+{
+    margin-top:5px;
+}
+.print-content
+{
+    width:1000px; float:left;
+}
+
+.print-blue-border {
+    border:solid 2px #3997D4;
+}
+.print-orange-border {
+    border:solid 2px #e57d25;
+}
+.print-green-border {
+    border:solid 2px #4bb96d;
+}
+.print-yellow-border {
+    border:solid 2px #e4b023;
+}
+
+.print-page-title
+{
+    line-height:50px;
+}
+
+.menu-bg{
+    background-color:#eff3f4;
+}
+
+
+.loading
+{
+    font-size:14px;
+    font-weight:bold;
+    margin-top:16px;
+    align-content:center;
+    text-align:center;
+}
+
+.no-margin
+{
+    margin:0px !important;
+}
+
+.print-actionitem {
+    border-radius: 25px;
+    min-height:200px;
+    width:400px;
+    margin-top:20px;
+}
+
+.print-actionitem .print-header
+{
+    margin-top:25px; 
+    height:25px;
+    line-height :22px;
+    color:#fff;
+    margin-left:-12px;
+    padding-left:15px;
+    width:400px;    
+    font-size:15px;
+}
+
+.print-actionitem .print-header img
+{
+    vertical-align:text-top;
+    margin-top:-23px;
+}
+
+.print-actionitem .print-header span
+{
+    margin-top:-15px;
+    margin-left:5px;
+}
+
+.chart-small {
+    height: 330px;
+}
+
+.chart-xsmall {
+    height: 250px;
+}
+
+.print-image{
+    /*position: relative; width: 70%; height: 100%; margin: auto;*/
+}
+
+.print-age-gender-table {
+    width:100%;
+    height:100%;
+}
+
+.print-age-gender-table tr td
+{
+    line-height:3;
+}
+.print-age-gender-table .col1 {
+    width: 50%;
+    text-align: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.print-age-gender-table .col2 {
+    width: 25%;
+    text-align: center;
+    position: relative;
+    min-height: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.print-age-gender-table .col3 {
+    width: 25%;
+    text-align: center;
+    position: relative;
+    min-height: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.width-550{
+    width:550px;
+}
+
+.button-orange{
+    height: 30px;
+    font-weight: bold;
+    border:0px;
+    margin-top:10px;
+    background: orange;
+    border-radius: 6px;
+    color:#ffffff;
+}
+
+.innerdiv {
+  display: table;
+  margin: 0 auto;
+ }
+
+.img-width{
+    width:190px;
+}
+
+.sidebar .tab-content
+{
+    min-height:1000px !important;
+}
+
+
+.login .photo {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: 30px 135px;
+	border-radius: 50%;
+	background: rgb(223, 223, 223);
+	border: 13px solid rgb(223, 223, 223);
+	overflow: hidden !important;
+	transform: rotate(-1deg);
+}
+
+.login .photo:before {
+	position: absolute;
+	content: '';
+	width: 35px;
+	height: 35px;
+	top: 0px;
+	right: 20px;
+	border-radius: 50%;
+	background: #aaa;
+	border: 2px solid #fff;
+	transform: scale(0);
+	transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	-webkit-animation: user-head 0.5s 0s forwards;
+	-moz-animation: user-head 0.5s 0s forwards;
+	animation: user-head 0.5s 0s forwards;
+}
+
+.login .photo:after {
+	position: absolute;
+	content: '';
+	width: 140px;
+	height: 220px;
+	top: 38px;
+	right: -32px;
+	border-radius: 50%;
+	background: #aaa;
+	border: 2px solid #fff;
+	transform: translateY(36px);
+	transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	-webkit-animation: user-body 0.5s 0.3s forwards;
+	-moz-animation: user-body 0.5s 0.3s forwards;
+	animation: user-body 0.5s 0.3s forwards;
+}
+
+
+/*Starts login*/
+.login {
+	padding: 10px;
+	width: 400px;
+	height: 530px;
+	border-radius: 3px;
+	background: white;
+	box-shadow: 0 1px 5px 0 rgba(0,0,0,0.26);
+	overflow: hidden;
+    margin:auto;
+}
+
+.login > i {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	float: right;
+	cursor: pointer;
+}
+
+.login .photo {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: 30px 135px;
+	border-radius: 50%;
+	background: rgb(223, 223, 223);
+	border: 13px solid rgb(223, 223, 223);
+	overflow: hidden !important;
+	transform: rotate(-1deg);
+}
+
+.login .photo:before {
+	position: absolute;
+	content: '';
+	width: 35px;
+	height: 35px;
+	top: 0px;
+	right: 20px;
+	border-radius: 50%;
+	background: #aaa;
+	border: 2px solid #fff;
+	transform: scale(0);
+	transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	-webkit-animation: user-head 0.5s 0s forwards;
+	-moz-animation: user-head 0.5s 0s forwards;
+	animation: user-head 0.5s 0s forwards;
+}
+
+.login .photo:after {
+	position: absolute;
+	content: '';
+	width: 140px;
+	height: 220px;
+	top: 38px;
+	right: -32px;
+	border-radius: 50%;
+	background: #aaa;
+	border: 2px solid #fff;
+	transform: translateY(36px);
+	transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	-webkit-animation: user-body 0.5s 0.3s forwards;
+	-moz-animation: user-body 0.5s 0.3s forwards;
+	animation: user-body 0.5s 0.3s forwards;
+}
+
+.login > span {
+	display: block;
+	text-align: center;
+	margin: -15px 0;
+	font-size: 15px;
+}
+
+.login{
+    height:auto;
+}
+.loginBtn .moIcon
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+.loginBtn .seperator
+{
+    font-size: 22px;
+    padding: 0 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+.loginBtn .loginTxt
+{
+    vertical-align: middle;
+}
+.loginBtn
+{
+    margin-left:105px;
+}
+
+/* -- highlighter animation --------------------------- */
+@-webkit-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to { width:0; background:transparent; }
+}
+
+@-webkit-keyframes user-head {
+100% {
+	-webkit-transform:scale(1);
+	transform:scale(1);
+	-moz-transform:scale(1);
+} }
+@-moz-keyframes user-head {
+100% {
+	-webkit-transform:scale(1);
+	transform:scale(1);
+	-moz-transform:scale(1);
+} }
+@keyframes user-head {
+100% {
+	-webkit-transform:scale(1);
+	transform:scale(1);
+	-moz-transform:scale(1);
+} }
+
+@-webkit-keyframes user-body {
+100% {
+	-webkit-transform:translateY(2px);
+	transform:translateY(2px);
+	-moz-transform:translateY(2px);
+} }
+@-moz-keyframes user-body {
+100% {
+	-webkit-transform:translateY(2px);
+	transform:translateY(2px);
+	-moz-transform:translateY(2px);
+} }
+@keyframes user-body {
+100% {
+	-webkit-transform:translateY(2px);
+	transform:translateY(2px);
+	-moz-transform:translateY(2px);
+} }
+
+[ripple] {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: box-shadow .4s;
+  -moz-transition: box-shadow .4s;
+  -ms-transition: box-shadow .4s;
+  -o-transition: box-shadow .4s;
+  transition: box-shadow .4s;
+  cursor: inherit;
+}
+
+[ripple] .touch {
+  background: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+  border-radius: 100%;
+}
+/*End Login*/
+
+
+/*Start custom style for Print drop down menu Added by Patrik Praveen on  July 20, 2017*/
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus
+{
+    background:transparent;
+}
+.dropdown-menu
+{
+}
+.dropdown-menu > li > a
+{
+    color:black !important;
+     text-decoration: none !important;
+        font-weight: 400;
+        font-size: 12px;
+}
+.navbar-right .dropdown-menu
+{
+    left :inherit !important;
+    right:inherit !important;
+}
+.selectedClientName{
+    height: 50px;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    vertical-align:middle;
+}
+/*End custom style for Print drop down menu Added by Patrik Praveen on  July 20, 2017*/
+
+.chartLoading {
+  background: rgba(0, 0, 0, 0.8) !important;
+  color: black;
+  font-size: 25px;
+    z-index:20000000;
+}
+
+.chartLoading span {
+  display: block;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+  z-index:20000000;
+}
+
+#planDesigntable tr,#planDesigntable th
+{
+    font-weight:bold;
+    font-size:15px;
+    text-align:center;
+}
+
+.padding-leftright-0 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+.height-438 {
+    min-height: 438px;
+    height: auto;
+}
+
+.DemoGraphicCenterBlock{
+    min-width: 237.5px !important;
+}
+
+
+.top401
+{
+    font-size: 7em;
+}
+
+
+.topChartTitle
+{
+    font-size: 14px;
+    font-weight: bold;
+    height: 95px;
+    vertical-align: middle;
+    padding-top: 35px;
+    width:20%;
+}
+
+.loginFooter
+{
+    color:#ffffff;
+}
+
+.loginFooter a:hover
+{
+    color:#ffffff;
+}
+
+.spanbenchmarkGrey {
+    display: inline-block;
+    line-height: 10px;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #808080;
+    width: 10px;
+    height: 10px;
+    margin-right:10px;
+}
+.spanActualRed{
+      display: inline-block;
+   line-height: 10px;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #f00;
+    width: 10px;
+    height: 10px;
+    margin-left:20px;
+    margin-right:5px;
+}
+
+.spanActualGreen{
+       display: inline-block;
+   line-height: 10px;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #008000;
+    width: 10px;
+    height: 10px;
+    margin-right:10px;
+}

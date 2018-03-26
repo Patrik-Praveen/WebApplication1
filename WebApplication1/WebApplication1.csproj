@@ -1,0 +1,1489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F96C8780-04C4-47F4-9BB8-0ED31D516D44}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\assets\css\amchartserial\style.css" />
+    <Content Include="Content\assets\css\dashboard-new.css" />
+    <Content Include="Content\assets\css\style.css" />
+    <Content Include="Content\assets\css\themes\theme-blue.css" />
+    <Content Include="Content\assets\css\themes\theme-dark.css" />
+    <Content Include="Content\assets\css\themes\theme-default.css" />
+    <Content Include="Content\assets\css\themes\theme-green.css" />
+    <Content Include="Content\assets\css\themes\theme-orange.css" />
+    <Content Include="Content\assets\css\themes\theme-pink.css" />
+    <Content Include="Content\assets\css\themes\theme-purple.css" />
+    <Content Include="Content\assets\css\themes\theme-red.css" />
+    <Content Include="Content\assets\css\themes\theme-yellow.css" />
+    <Content Include="Content\assets\css\ui.css" />
+    <Content Include="Content\assets\img\core\logo.png" />
+    <Content Include="Content\assets\img\core\new-order.jpg" />
+    <Content Include="Content\assets\img\core\revenue.jpg" />
+    <Content Include="Content\assets\img\core\sidebar-switcher-icon.png" />
+    <Content Include="Content\assets\img\core\status.gif" />
+    <Content Include="Content\assets\img\uploads\cover.jpg" />
+    <Content Include="Content\assets\img\uploads\image1.jpg" />
+    <Content Include="Content\assets\img\uploads\profile-picture-lg.jpg" />
+    <Content Include="Content\assets\img\uploads\profile.jpg" />
+    <Content Include="Content\assets\img\uploads\profile1.jpg" />
+    <Content Include="Content\assets\img\uploads\profile2.jpg" />
+    <Content Include="Content\assets\img\uploads\profile3.jpg" />
+    <Content Include="Content\assets\img\uploads\profile4.jpg" />
+    <Content Include="Content\assets\img\uploads\profile5.jpg" />
+    <Content Include="Content\assets\img\uploads\profile6.jpg" />
+    <Content Include="Content\assets\js\init\init.chartjs.js" />
+    <Content Include="Content\assets\js\init\init.dashboard-new.js" />
+    <Content Include="Content\assets\js\init\init.dashboard-old.js" />
+    <Content Include="Content\assets\js\init\init.easypie.js" />
+    <Content Include="Content\assets\js\init\init.flot.js" />
+    <Content Include="Content\assets\js\init\init.forms-and-validation.js" />
+    <Content Include="Content\assets\js\init\init.fullcalendar.js" />
+    <Content Include="Content\assets\js\init\init.sparkline.js" />
+    <Content Include="Content\assets\js\quarca.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\action-item-blue-icon.svg" />
+    <Content Include="Content\images\action-item-green-icon.svg" />
+    <Content Include="Content\images\action-item-orange-icon.svg" />
+    <Content Include="Content\images\action-item-yellow-icon.svg" />
+    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\BFunnel-small.png" />
+    <Content Include="Content\images\BFunnel.png" />
+    <Content Include="Content\images\bottom-small.png" />
+    <Content Include="Content\images\bottom.png" />
+    <Content Include="Content\images\bottomBGstepchart.png" />
+    <Content Include="Content\images\bottomN-small.png" />
+    <Content Include="Content\images\bottomN.png" />
+    <Content Include="Content\images\Building_Green.png" />
+    <Content Include="Content\images\Building_Red.png" />
+    <Content Include="Content\images\Chair_Green.png" />
+    <Content Include="Content\images\Chair_Red.png" />
+    <Content Include="Content\images\check.png" />
+    <Content Include="Content\images\checklist-unchecked.png" />
+    <Content Include="Content\images\checklist.png" />
+    <Content Include="Content\images\close.png" />
+    <Content Include="Content\images\core\logo.png" />
+    <Content Include="Content\images\core\new-order.jpg" />
+    <Content Include="Content\images\core\revenue.jpg" />
+    <Content Include="Content\images\core\sidebar-switcher-icon.png" />
+    <Content Include="Content\images\core\status.gif" />
+    <Content Include="Content\images\Greenbottom-small.png" />
+    <Content Include="Content\images\Greenbottom-small.svg" />
+    <Content Include="Content\images\Greenbottom.png" />
+    <Content Include="Content\images\Greenbottom.svg" />
+    <Content Include="Content\images\Greenmiddle-small.png" />
+    <Content Include="Content\images\Greenmiddle-small.svg" />
+    <Content Include="Content\images\Greenmiddle.png" />
+    <Content Include="Content\images\Greenmiddle.svg" />
+    <Content Include="Content\images\Greentop-small.png" />
+    <Content Include="Content\images\Greentop-small.svg" />
+    <Content Include="Content\images\Greentop.png" />
+    <Content Include="Content\images\Greentop.svg" />
+    <Content Include="Content\images\greybottom-small.png" />
+    <Content Include="Content\images\greybottom.png" />
+    <Content Include="Content\images\greymiddle-small.png" />
+    <Content Include="Content\images\greymiddle.png" />
+    <Content Include="Content\images\greytop-small.png" />
+    <Content Include="Content\images\greytop.png" />
+    <Content Include="Content\images\icon-blank-person.jpg" />
+    <Content Include="Content\images\icon-blank-person.svg" />
+    <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\man-1.png" />
+    <Content Include="Content\images\man-1.svg" />
+    <Content Include="Content\images\man-10.png" />
+    <Content Include="Content\images\man-10.svg" />
+    <Content Include="Content\images\man-2.png" />
+    <Content Include="Content\images\man-2.svg" />
+    <Content Include="Content\images\man-3.png" />
+    <Content Include="Content\images\man-3.svg" />
+    <Content Include="Content\images\man-4.png" />
+    <Content Include="Content\images\man-4.svg" />
+    <Content Include="Content\images\man-5.png" />
+    <Content Include="Content\images\man-5.svg" />
+    <Content Include="Content\images\man-6.png" />
+    <Content Include="Content\images\man-6.svg" />
+    <Content Include="Content\images\man-7.png" />
+    <Content Include="Content\images\man-7.svg" />
+    <Content Include="Content\images\man-8.png" />
+    <Content Include="Content\images\man-8.svg" />
+    <Content Include="Content\images\man-9.png" />
+    <Content Include="Content\images\man-9.svg" />
+    <Content Include="Content\images\man.png" />
+    <Content Include="Content\images\MFunnel-small.png" />
+    <Content Include="Content\images\MFunnel.png" />
+    <Content Include="Content\images\middle-small.png" />
+    <Content Include="Content\images\middle.png" />
+    <Content Include="Content\images\middleN-small.png" />
+    <Content Include="Content\images\middleN.png" />
+    <Content Include="Content\images\print-icon.png" />
+    <Content Include="Content\images\printloading.gif" />
+    <Content Include="Content\images\profile.jpg" />
+    <Content Include="Content\images\stepbackground.png" />
+    <Content Include="Content\images\TFunnel-small.png" />
+    <Content Include="Content\images\TFunnel.png" />
+    <Content Include="Content\images\top-small.png" />
+    <Content Include="Content\images\top.png" />
+    <Content Include="Content\images\topN-small.png" />
+    <Content Include="Content\images\topN.png" />
+    <Content Include="Content\images\Truck_Green.png" />
+    <Content Include="Content\images\Truck_Red.png" />
+    <Content Include="Content\images\uploads\cover.jpg" />
+    <Content Include="Content\images\uploads\image1.jpg" />
+    <Content Include="Content\images\uploads\profile-picture-lg.jpg" />
+    <Content Include="Content\images\uploads\profile.jpg" />
+    <Content Include="Content\images\uploads\profile1.jpg" />
+    <Content Include="Content\images\uploads\profile2.jpg" />
+    <Content Include="Content\images\uploads\profile3.jpg" />
+    <Content Include="Content\images\uploads\profile4.jpg" />
+    <Content Include="Content\images\uploads\profile5.jpg" />
+    <Content Include="Content\images\uploads\profile6.jpg" />
+    <Content Include="Content\images\Whitemiddle.png" />
+    <Content Include="Content\images\women.png" />
+    <Content Include="Content\landing\css\min.css" />
+    <Content Include="Content\landing\css\New Text Document.txt" />
+    <Content Include="Content\landing\css\style.css" />
+    <Content Include="Content\landing\img\cps-logo-wt.png" />
+    <Content Include="Content\landing\img\landing-page3bg.jpg" />
+    <Content Include="Content\landing\img\landing-page3logo-bg.jpg" />
+    <Content Include="Content\landing\img\landing-page3_miliman.png" />
+    <Content Include="Content\landing\img\miliman-logo.jpg" />
+    <Content Include="Content\landing\js\bootstrap.min.js" />
+    <Content Include="Content\landing\js\min.js" />
+    <Content Include="Content\vendor\fonts\font-awesome.css" />
+    <Content Include="Content\vendor\fonts\font-awesome.min.css" />
+    <Content Include="Content\vendor\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\vendor\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\vendor\jqueryui\jquery-ui.js" />
+    <Content Include="Content\vendor\jqueryui\jquery-ui.min.js" />
+    <Content Include="Content\vendor\jqueryui\jquery.ui.touch-punch.js" />
+    <Content Include="Content\vendor\jqueryui\jquery.ui.touch-punch.min.js" />
+    <Content Include="Content\vendor\jqueryui\readme.txt" />
+    <Content Include="Content\vendor\js\required.js" />
+    <Content Include="Content\vendor\js\required.min.js" />
+    <Content Include="Content\vendor\plugins\charts\chartjs\Chart.js" />
+    <Content Include="Content\vendor\plugins\charts\chartjs\Chart.min.js" />
+    <Content Include="Content\vendor\plugins\charts\easypie\jquery.easypiechart.js" />
+    <Content Include="Content\vendor\plugins\charts\easypie\jquery.easypiechart.min.js" />
+    <Content Include="Content\vendor\plugins\charts\excanvas.js" />
+    <Content Include="Content\vendor\plugins\charts\excanvas.min.js" />
+    <Content Include="Content\vendor\plugins\charts\flot\jquery.flot.js" />
+    <Content Include="Content\vendor\plugins\charts\flot\jquery.flot.min.js" />
+    <Content Include="Content\vendor\plugins\charts\flot\jquery.flot.pie.js" />
+    <Content Include="Content\vendor\plugins\charts\flot\jquery.flot.pie.min.js" />
+    <Content Include="Content\vendor\plugins\charts\flot\jquery.flot.resize.js" />
+    <Content Include="Content\vendor\plugins\charts\flot\jquery.flot.resize.min.js" />
+    <Content Include="Content\vendor\plugins\charts\flot\jquery.flot.time.js" />
+    <Content Include="Content\vendor\plugins\charts\flot\jquery.flot.time.min.js" />
+    <Content Include="Content\vendor\plugins\charts\flot\jquery.flot.tooltip.js" />
+    <Content Include="Content\vendor\plugins\charts\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\vendor\plugins\charts\sparklines\jquery.sparkline.js" />
+    <Content Include="Content\vendor\plugins\charts\sparklines\jquery.sparkline.min.js" />
+    <Content Include="Content\vendor\plugins\form\autonumeric\autoNumeric.js" />
+    <Content Include="Content\vendor\plugins\form\autosize\jquery.autosize.js" />
+    <Content Include="Content\vendor\plugins\form\autosize\jquery.autosize.min.js" />
+    <Content Include="Content\vendor\plugins\form\bootstrap-select\bootstrap-select.css" />
+    <Content Include="Content\vendor\plugins\form\bootstrap-select\bootstrap-select.js" />
+    <Content Include="Content\vendor\plugins\form\bootstrap-select\bootstrap-select.min.css" />
+    <Content Include="Content\vendor\plugins\form\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="Content\vendor\plugins\form\datetimepicker\bootstrap-datetimepicker.css" />
+    <Content Include="Content\vendor\plugins\form\datetimepicker\bootstrap-datetimepicker.js" />
+    <Content Include="Content\vendor\plugins\form\datetimepicker\bootstrap-datetimepicker.min.js" />
+    <Content Include="Content\vendor\plugins\form\drag-drop-uploader\jquery.fileupload.js" />
+    <Content Include="Content\vendor\plugins\form\drag-drop-uploader\jquery.iframe-transport.js" />
+    <Content Include="Content\vendor\plugins\form\drag-drop-uploader\jquery.knob.js" />
+    <Content Include="Content\vendor\plugins\form\drag-drop-uploader\script.js" />
+    <Content Include="Content\vendor\plugins\form\icheck\icheck.js" />
+    <Content Include="Content\vendor\plugins\form\icheck\icheck.min.js" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\all.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\aero%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\aero.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\aero.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\blue%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\blue.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\blue.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\flat%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\flat.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\flat.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\green%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\green.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\green.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\grey%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\grey.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\grey.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\orange%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\orange.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\orange.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\pink%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\pink.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\pink.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\purple%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\purple.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\purple.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\red%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\red.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\red.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\yellow%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\yellow.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\yellow.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\flat\_all.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\futurico\futurico%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\futurico\futurico.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\futurico\futurico.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\line\aero.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\line\blue.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\line\green.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\line\grey.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\line\line%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\line\line.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\line\line.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\line\orange.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\line\pink.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\line\purple.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\line\red.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\line\yellow.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\line\_all.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\aero%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\aero.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\aero.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\blue%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\blue.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\blue.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\green%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\green.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\green.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\grey%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\grey.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\grey.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\minimal%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\minimal.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\minimal.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\orange%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\orange.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\orange.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\pink%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\pink.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\pink.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\purple%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\purple.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\purple.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\red%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\red.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\red.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\yellow%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\yellow.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\yellow.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\minimal\_all.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\polaris\polaris%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\polaris\polaris.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\polaris\polaris.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\aero%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\aero.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\aero.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\blue%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\blue.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\blue.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\green%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\green.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\green.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\grey%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\grey.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\grey.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\orange%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\orange.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\orange.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\pink%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\pink.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\pink.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\purple%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\purple.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\purple.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\red%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\red.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\red.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\square%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\square.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\square.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\yellow%402x.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\yellow.css" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\yellow.png" />
+    <Content Include="Content\vendor\plugins\form\icheck\skins\square\_all.css" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\additional-methods.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\additional-methods.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\jquery.validate.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\jquery.validate.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_ar.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_ar.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_bg.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_bg.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_ca.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_ca.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_cs.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_cs.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_da.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_da.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_de.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_de.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_el.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_el.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_es.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_es.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_es_AR.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_es_AR.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_et.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_et.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_eu.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_eu.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_fa.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_fa.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_fi.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_fi.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_fr.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_fr.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_gl.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_gl.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_he.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_he.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_hr.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_hr.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_hu.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_hu.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_id.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_id.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_is.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_is.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_it.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_it.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_ja.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_ja.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_ka.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_ka.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_kk.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_kk.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_ko.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_ko.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_lt.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_lt.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_lv.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_lv.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_my.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_my.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_nl.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_nl.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_no.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_no.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_pl.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_pl.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_pt_BR.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_pt_BR.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_pt_PT.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_pt_PT.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_ro.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_ro.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_ru.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_ru.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_si.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_si.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_sk.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_sk.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_sl.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_sl.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_sr.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_sr.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_sr_lat.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_sr_lat.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_sv.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_sv.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_th.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_th.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_tj.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_tj.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_tr.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_tr.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_uk.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_uk.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_vi.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_vi.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_zh.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_zh.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_zh_TW.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\messages_zh_TW.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\methods_de.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\methods_de.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\methods_es_CL.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\methods_es_CL.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\methods_fi.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\methods_fi.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\methods_nl.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\methods_nl.min.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\methods_pt.js" />
+    <Content Include="Content\vendor\plugins\form\jquery-validation\localization\methods_pt.min.js" />
+    <Content Include="Content\vendor\plugins\form\masked-input\jquery.maskedinput.js" />
+    <Content Include="Content\vendor\plugins\form\masked-input\jquery.maskedinput.min.js" />
+    <Content Include="Content\vendor\plugins\form\minicolors\jquery.minicolors.js" />
+    <Content Include="Content\vendor\plugins\form\minicolors\jquery.minicolors.min.js" />
+    <Content Include="Content\vendor\plugins\form\minicolors\jquery.minicolors.png" />
+    <Content Include="Content\vendor\plugins\form\minicolors\minicolors.css" />
+    <Content Include="Content\vendor\plugins\form\spinner\jquery.spinner.js" />
+    <Content Include="Content\vendor\plugins\form\spinner\jquery.spinner.min.js" />
+    <Content Include="Content\vendor\plugins\form\summernote\summernote-bs3.css" />
+    <Content Include="Content\vendor\plugins\form\summernote\summernote.css" />
+    <Content Include="Content\vendor\plugins\form\summernote\summernote.js" />
+    <Content Include="Content\vendor\plugins\form\summernote\summernote.min.js" />
+    <Content Include="Content\vendor\plugins\form\switchery\switchery.js" />
+    <Content Include="Content\vendor\plugins\form\switchery\switchery.min.js" />
+    <Content Include="Content\vendor\plugins\form\tags-input\jquery.tagsinput.js" />
+    <Content Include="Content\vendor\plugins\form\tags-input\jquery.tagsinput.min.js" />
+    <Content Include="Content\vendor\plugins\maps\maplace\maplace-0.1.3.js" />
+    <Content Include="Content\vendor\plugins\maps\maplace\maplace-0.1.3.min.js" />
+    <Content Include="Content\vendor\plugins\media\jquery.fitvids.js" />
+    <Content Include="Content\vendor\plugins\others\jquery-cookie\jquery.cookie.js" />
+    <Content Include="Content\vendor\plugins\others\moment\moment-with-locales.js" />
+    <Content Include="Content\vendor\plugins\others\moment\moment.js" />
+    <Content Include="Content\vendor\plugins\others\moment\moment.min.js" />
+    <Content Include="Content\vendor\plugins\others\mousewheel\jquery.mousewheel.js" />
+    <Content Include="Content\vendor\plugins\others\mousewheel\jquery.mousewheel.min.js" />
+    <Content Include="Content\vendor\plugins\others\underscore\underscore-min.js" />
+    <Content Include="Content\vendor\plugins\others\underscore\underscore.js" />
+    <Content Include="Content\vendor\plugins\ui\carousel\owl.carousel.css" />
+    <Content Include="Content\vendor\plugins\ui\carousel\owl.carousel.js" />
+    <Content Include="Content\vendor\plugins\ui\carousel\owl.carousel.min.js" />
+    <Content Include="Content\vendor\plugins\ui\fittext\jquery.fittext.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\fullcalendar.css" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\fullcalendar.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\ar-ma.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\ar-sa.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\ar-tn.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\ar.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\bg.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\ca.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\cs.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\da.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\de-at.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\de.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\el.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\en-au.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\en-ca.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\en-gb.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\es.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\fa.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\fi.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\fr-ca.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\fr.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\he.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\hi.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\hr.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\hu.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\id.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\is.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\it.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\ja.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\ko.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\lt.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\lv.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\nb.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\nl.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\pl.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\pt-br.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\pt.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\ro.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\ru.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\sk.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\sl.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\sr-cyrl.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\sr.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\sv.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\th.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\tr.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\uk.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\vi.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\zh-cn.js" />
+    <Content Include="Content\vendor\plugins\ui\fullcalendar\lang\zh-tw.js" />
+    <Content Include="Content\vendor\plugins\ui\gridstack\gridstack.js" />
+    <Content Include="Content\vendor\plugins\ui\gridstack\gridstack.min.js" />
+    <Content Include="Content\vendor\plugins\ui\listjs\list.fuzzysearch.js" />
+    <Content Include="Content\vendor\plugins\ui\listjs\list.fuzzysearch.min.js" />
+    <Content Include="Content\vendor\plugins\ui\listjs\list.js" />
+    <Content Include="Content\vendor\plugins\ui\listjs\list.min.js" />
+    <Content Include="Content\vendor\plugins\ui\listjs\list.pagination.js" />
+    <Content Include="Content\vendor\plugins\ui\listjs\list.pagination.min.js" />
+    <Content Include="Content\vendor\plugins\ui\match-height\jquery.matchHeight-min.js" />
+    <Content Include="Content\vendor\plugins\ui\match-height\jquery.matchHeight.js" />
+    <Content Include="Content\vendor\plugins\ui\metis-menu\metisMenu.js" />
+    <Content Include="Content\vendor\plugins\ui\metis-menu\metisMenu.min.js" />
+    <Content Include="Content\vendor\plugins\ui\progress-bar\bootstrap-progressbar.js" />
+    <Content Include="Content\vendor\plugins\ui\progress-bar\bootstrap-progressbar.min.js" />
+    <Content Include="Content\vendor\plugins\ui\scrollpane\jquery.jscrollpane.css" />
+    <Content Include="Content\vendor\plugins\ui\scrollpane\jquery.jscrollpane.js" />
+    <Content Include="Content\vendor\plugins\ui\scrollpane\jquery.jscrollpane.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\amchart\AmAngularGauge.js" />
+    <Content Include="Scripts\amchart\amCharts.css" />
+    <Content Include="Scripts\amchart\amcharts.js" />
+    <Content Include="Scripts\amchart\AmFunnelChart.js" />
+    <Content Include="Scripts\amchart\AmGanttChart.js" />
+    <Content Include="Scripts\amchart\AmLegend.js" />
+    <Content Include="Scripts\amchart\ammap.js" />
+    <Content Include="Scripts\amchart\AmPieChart.js" />
+    <Content Include="Scripts\amchart\AmRadarChart.js" />
+    <Content Include="Scripts\amchart\AmSerialChart.js" />
+    <Content Include="Scripts\amchart\AmXYChart.js" />
+    <Content Include="Scripts\amchart\axes\AxisBase.js" />
+    <Content Include="Scripts\amchart\axes\CategoryAxis.js" />
+    <Content Include="Scripts\amchart\axes\GaugeArrow.js" />
+    <Content Include="Scripts\amchart\axes\GaugeAxis.js" />
+    <Content Include="Scripts\amchart\axes\RadAxis.js" />
+    <Content Include="Scripts\amchart\axes\RadFill.js" />
+    <Content Include="Scripts\amchart\axes\RadItem.js" />
+    <Content Include="Scripts\amchart\axes\RecAxis.js" />
+    <Content Include="Scripts\amchart\axes\RecFill.js" />
+    <Content Include="Scripts\amchart\axes\RecItem.js" />
+    <Content Include="Scripts\amchart\axes\ValueAxis.js" />
+    <Content Include="Scripts\amchart\chartClasses\AmBalloon.js" />
+    <Content Include="Scripts\amchart\chartClasses\AmChart.js" />
+    <Content Include="Scripts\amchart\chartClasses\AmCoordinateChart.js" />
+    <Content Include="Scripts\amchart\chartClasses\AmGraph.js" />
+    <Content Include="Scripts\amchart\chartClasses\AmRectangularChart.js" />
+    <Content Include="Scripts\amchart\chartClasses\AmSlicedChart.js" />
+    <Content Include="Scripts\amchart\chartClasses\ChartCursor.js" />
+    <Content Include="Scripts\amchart\chartClasses\ChartScrollbar.js" />
+    <Content Include="Scripts\amchart\chartClasses\Image.js" />
+    <Content Include="Scripts\amchart\chartClasses\SimpleChartScrollbar.js" />
+    <Content Include="Scripts\amchart\chartClasses\TrendLine.js" />
+    <Content Include="Scripts\amchart\drawingEngine\AmDObject.js" />
+    <Content Include="Scripts\amchart\drawingEngine\AmDraw.js" />
+    <Content Include="Scripts\amchart\drawingEngine\SVGRenderer.js" />
+    <Content Include="Scripts\amchart\drawingEngine\VMLRenderer.js" />
+    <Content Include="Scripts\amchart\funnel.js" />
+    <Content Include="Scripts\amchart\gantt.js" />
+    <Content Include="Scripts\amchart\gauge.js" />
+    <Content Include="Scripts\amchart\geom\Bezier.js" />
+    <Content Include="Scripts\amchart\geom\Cuboid.js" />
+    <Content Include="Scripts\amchart\geom\Geom.js" />
+    <Content Include="Scripts\amchart\images\dragIcon.gif" />
+    <Content Include="Scripts\amchart\images\dragIconBlack.gif" />
+    <Content Include="Scripts\amchart\images\dragIconH.gif" />
+    <Content Include="Scripts\amchart\images\dragIconHBlack.gif" />
+    <Content Include="Scripts\amchart\images\dragIconRectBig.png" />
+    <Content Include="Scripts\amchart\images\dragIconRectBig.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRectBigBlack.png" />
+    <Content Include="Scripts\amchart\images\dragIconRectBigBlack.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRectBigBlackH.png" />
+    <Content Include="Scripts\amchart\images\dragIconRectBigBlackH.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRectBigH.png" />
+    <Content Include="Scripts\amchart\images\dragIconRectBigH.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRectSmall.png" />
+    <Content Include="Scripts\amchart\images\dragIconRectSmall.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRectSmallBlack.png" />
+    <Content Include="Scripts\amchart\images\dragIconRectSmallBlack.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRectSmallBlackH.png" />
+    <Content Include="Scripts\amchart\images\dragIconRectSmallBlackH.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRectSmallH.png" />
+    <Content Include="Scripts\amchart\images\dragIconRectSmallH.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRoundBig.png" />
+    <Content Include="Scripts\amchart\images\dragIconRoundBig.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRoundBigBlack.png" />
+    <Content Include="Scripts\amchart\images\dragIconRoundBigBlack.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRoundBigBlackH.png" />
+    <Content Include="Scripts\amchart\images\dragIconRoundBigBlackH.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRoundBigH.png" />
+    <Content Include="Scripts\amchart\images\dragIconRoundBigH.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRoundSmall.png" />
+    <Content Include="Scripts\amchart\images\dragIconRoundSmall.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRoundSmallBlack.png" />
+    <Content Include="Scripts\amchart\images\dragIconRoundSmallBlack.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRoundSmallBlackH.png" />
+    <Content Include="Scripts\amchart\images\dragIconRoundSmallBlackH.svg" />
+    <Content Include="Scripts\amchart\images\dragIconRoundSmallH.png" />
+    <Content Include="Scripts\amchart\images\dragIconRoundSmallH.svg" />
+    <Content Include="Scripts\amchart\images\eraserIcon.svg" />
+    <Content Include="Scripts\amchart\images\eraserIconH.svg" />
+    <Content Include="Scripts\amchart\images\export.png" />
+    <Content Include="Scripts\amchart\images\exportWhite.png" />
+    <Content Include="Scripts\amchart\images\lens.png" />
+    <Content Include="Scripts\amchart\images\lens.svg" />
+    <Content Include="Scripts\amchart\images\lensWhite.png" />
+    <Content Include="Scripts\amchart\images\lensWhite.svg" />
+    <Content Include="Scripts\amchart\images\lensWhite_old.png" />
+    <Content Include="Scripts\amchart\images\lens_old.png" />
+    <Content Include="Scripts\amchart\images\pencilIcon.svg" />
+    <Content Include="Scripts\amchart\images\pencilIconH.svg" />
+    <Content Include="Scripts\amchart\images\xIcon.svg" />
+    <Content Include="Scripts\amchart\images\xIconH.svg" />
+    <Content Include="Scripts\amchart\lang\az.js" />
+    <Content Include="Scripts\amchart\lang\bg.js" />
+    <Content Include="Scripts\amchart\lang\cs.js" />
+    <Content Include="Scripts\amchart\lang\de.js" />
+    <Content Include="Scripts\amchart\lang\es.js" />
+    <Content Include="Scripts\amchart\lang\fi.js" />
+    <Content Include="Scripts\amchart\lang\fo.js" />
+    <Content Include="Scripts\amchart\lang\fr.js" />
+    <Content Include="Scripts\amchart\lang\hr.js" />
+    <Content Include="Scripts\amchart\lang\hu.js" />
+    <Content Include="Scripts\amchart\lang\id.js" />
+    <Content Include="Scripts\amchart\lang\is.js" />
+    <Content Include="Scripts\amchart\lang\it.js" />
+    <Content Include="Scripts\amchart\lang\ja.js" />
+    <Content Include="Scripts\amchart\lang\ko.js" />
+    <Content Include="Scripts\amchart\lang\lt.js" />
+    <Content Include="Scripts\amchart\lang\lv.js" />
+    <Content Include="Scripts\amchart\lang\mk.js" />
+    <Content Include="Scripts\amchart\lang\mn.js" />
+    <Content Include="Scripts\amchart\lang\mt.js" />
+    <Content Include="Scripts\amchart\lang\nl.js" />
+    <Content Include="Scripts\amchart\lang\no.js" />
+    <Content Include="Scripts\amchart\lang\pl.js" />
+    <Content Include="Scripts\amchart\lang\pt.js" />
+    <Content Include="Scripts\amchart\lang\ro.js" />
+    <Content Include="Scripts\amchart\lang\ru.js" />
+    <Content Include="Scripts\amchart\lang\rw.js" />
+    <Content Include="Scripts\amchart\lang\sk.js" />
+    <Content Include="Scripts\amchart\lang\sl.js" />
+    <Content Include="Scripts\amchart\lang\so.js" />
+    <Content Include="Scripts\amchart\lang\th.js" />
+    <Content Include="Scripts\amchart\lang\tr.js" />
+    <Content Include="Scripts\amchart\lang\zh.js" />
+    <Content Include="Scripts\amchart\patterns\black\pattern1.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern10.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern11.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern12.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern13.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern14.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern15.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern16.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern17.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern18.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern19.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern2.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern20.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern21.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern3.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern4.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern5.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern6.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern7.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern8.png" />
+    <Content Include="Scripts\amchart\patterns\black\pattern9.png" />
+    <Content Include="Scripts\amchart\patterns\chalk\pattern1.jpg" />
+    <Content Include="Scripts\amchart\patterns\chalk\pattern1r.jpg" />
+    <Content Include="Scripts\amchart\patterns\chalk\pattern2.jpg" />
+    <Content Include="Scripts\amchart\patterns\chalk\pattern3.jpg" />
+    <Content Include="Scripts\amchart\patterns\chalk\pattern4.jpg" />
+    <Content Include="Scripts\amchart\patterns\chalk\pattern5.jpg" />
+    <Content Include="Scripts\amchart\patterns\chalk\pattern6.jpg" />
+    <Content Include="Scripts\amchart\patterns\green\patterngreen.png" />
+    <Content Include="Scripts\amchart\patterns\green\patterngreen.svg" />
+    <Content Include="Scripts\amchart\patterns\green\patterngreen11.png" />
+    <Content Include="Scripts\amchart\patterns\red\patternred.png" />
+    <Content Include="Scripts\amchart\patterns\red\patternred.svg" />
+    <Content Include="Scripts\amchart\patterns\white\pattern1.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern10.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern11.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern12.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern13.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern14.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern15.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern16.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern17.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern18.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern19.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern2.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern20.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern21.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern3.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern4.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern5.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern6.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern7.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern8.png" />
+    <Content Include="Scripts\amchart\patterns\white\pattern9.png" />
+    <Content Include="Scripts\amchart\pie.js" />
+    <Content Include="Scripts\amchart\plugins\animate\animate.js" />
+    <Content Include="Scripts\amchart\plugins\animate\animate.min.js" />
+    <Content Include="Scripts\amchart\plugins\animate\examples\funnel.html" />
+    <Content Include="Scripts\amchart\plugins\animate\examples\pie.html" />
+    <Content Include="Scripts\amchart\plugins\animate\examples\radar.html" />
+    <Content Include="Scripts\amchart\plugins\animate\examples\serial_column.html" />
+    <Content Include="Scripts\amchart\plugins\animate\examples\serial_line.html" />
+    <Content Include="Scripts\amchart\plugins\animate\examples\xy.html" />
+    <Content Include="Scripts\amchart\plugins\animate\index.js" />
+    <Content Include="Scripts\amchart\plugins\dataloader\dataloader.js" />
+    <Content Include="Scripts\amchart\plugins\dataloader\dataloader.min.js" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\gantt_json.html" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\gauge_json.html" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\map_json.html" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\map_json_external_function.html" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\pie_csv.html" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\pie_json.html" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\serial2_json.html" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\serial_csv.html" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\serial_json.html" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\serial_with_dynamic_graphs.html" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\stock_csv_data_and_events.html" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\stock_csv_progressbar.html" />
+    <Content Include="Scripts\amchart\plugins\dataloader\index.js" />
+    <Content Include="Scripts\amchart\plugins\dataloader\lang\cs.js" />
+    <Content Include="Scripts\amchart\plugins\dataloader\lang\en.js" />
+    <Content Include="Scripts\amchart\plugins\dataloader\lang\fr.js" />
+    <Content Include="Scripts\amchart\plugins\dataloader\lang\lt.js" />
+    <Content Include="Scripts\amchart\plugins\dataloader\license.txt" />
+    <Content Include="Scripts\amchart\plugins\export\.gitignore" />
+    <Content Include="Scripts\amchart\plugins\export\examples\advanced.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\export.config.advanced.js" />
+    <Content Include="Scripts\amchart\plugins\export\examples\export.config.default.js" />
+    <Content Include="Scripts\amchart\plugins\export\examples\funnel.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\gantt.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\gauge.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\images\bicycle.png" />
+    <Content Include="Scripts\amchart\plugins\export\examples\images\car.png" />
+    <Content Include="Scripts\amchart\plugins\export\examples\images\motorcycle.png" />
+    <Content Include="Scripts\amchart\plugins\export\examples\index.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\map.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\pie1.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\pie2.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\pie3.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\pie4.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\radar.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\serial1.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\serial2.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\serial3.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\stock.html" />
+    <Content Include="Scripts\amchart\plugins\export\examples\xy.html" />
+    <Content Include="Scripts\amchart\plugins\export\export.css" />
+    <Content Include="Scripts\amchart\plugins\export\export.js" />
+    <Content Include="Scripts\amchart\plugins\export\export.min.js" />
+    <Content Include="Scripts\amchart\plugins\export\index.js" />
+    <Content Include="Scripts\amchart\plugins\export\lang\cs.js" />
+    <Content Include="Scripts\amchart\plugins\export\lang\de.js" />
+    <Content Include="Scripts\amchart\plugins\export\lang\en.js" />
+    <Content Include="Scripts\amchart\plugins\export\lang\es.js" />
+    <Content Include="Scripts\amchart\plugins\export\lang\fr.js" />
+    <Content Include="Scripts\amchart\plugins\export\lang\hu.js" />
+    <Content Include="Scripts\amchart\plugins\export\lang\it.js" />
+    <Content Include="Scripts\amchart\plugins\export\lang\ko.js" />
+    <Content Include="Scripts\amchart\plugins\export\lang\lt.js" />
+    <Content Include="Scripts\amchart\plugins\export\lang\pl.js" />
+    <Content Include="Scripts\amchart\plugins\export\lang\pt.js" />
+    <Content Include="Scripts\amchart\plugins\export\lang\zh.js" />
+    <Content Include="Scripts\amchart\plugins\export\libs\blob.js\blob.js" />
+    <Content Include="Scripts\amchart\plugins\export\libs\fabric.js\fabric.js" />
+    <Content Include="Scripts\amchart\plugins\export\libs\fabric.js\fabric.min.js" />
+    <Content Include="Scripts\amchart\plugins\export\libs\FileSaver.js\FileSaver.js" />
+    <Content Include="Scripts\amchart\plugins\export\libs\FileSaver.js\FileSaver.min.js" />
+    <Content Include="Scripts\amchart\plugins\export\libs\jszip\jszip.js" />
+    <Content Include="Scripts\amchart\plugins\export\libs\jszip\jszip.min.js" />
+    <Content Include="Scripts\amchart\plugins\export\libs\pdfmake\pdfmake.js" />
+    <Content Include="Scripts\amchart\plugins\export\libs\pdfmake\pdfmake.min.js" />
+    <Content Include="Scripts\amchart\plugins\export\libs\pdfmake\vfs_fonts.js" />
+    <Content Include="Scripts\amchart\plugins\export\libs\xlsx\xlsx.js" />
+    <Content Include="Scripts\amchart\plugins\export\libs\xlsx\xlsx.min.js" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\1.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\10.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\11.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\12.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\13.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\14.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\15.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\16.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\17.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\18.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\19.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\2.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\20.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\21.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\22.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\23.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\24.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\25.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\26.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\27.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\28.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\29.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\3.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\30.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\31.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\4.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\5.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\6.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\7.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\8.svg" />
+    <Content Include="Scripts\amchart\plugins\export\shapes\9.svg" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\funnel.html" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\gantt.html" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\gauge.html" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\images\bicycle.png" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\images\car.png" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\images\motorcycle.png" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\index.html" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\map.html" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\pie1.html" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\pie2.html" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\pie3.html" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\radar.html" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\serial1.html" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\serial2.html" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\serial3.html" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\stock.html" />
+    <Content Include="Scripts\amchart\plugins\responsive\examples\xy.html" />
+    <Content Include="Scripts\amchart\plugins\responsive\index.js" />
+    <Content Include="Scripts\amchart\plugins\responsive\license.txt" />
+    <Content Include="Scripts\amchart\plugins\responsive\responsive.js" />
+    <Content Include="Scripts\amchart\plugins\responsive\responsive.min.js" />
+    <Content Include="Scripts\amchart\radar.js" />
+    <Content Include="Scripts\amchart\serial.js" />
+    <Content Include="Scripts\amchart\themes\black.js" />
+    <Content Include="Scripts\amchart\themes\chalk.js" />
+    <Content Include="Scripts\amchart\themes\dark.js" />
+    <Content Include="Scripts\amchart\themes\light.js" />
+    <Content Include="Scripts\amchart\themes\patterns.js" />
+    <Content Include="Scripts\amchart\usa2Low.js" />
+    <Content Include="Scripts\amchart\usaLow.js" />
+    <Content Include="Scripts\amchart\utils\Class.js" />
+    <Content Include="Scripts\amchart\utils\DateUtils.js" />
+    <Content Include="Scripts\amchart\utils\Utils.js" />
+    <Content Include="Scripts\amchart\xlsx.js" />
+    <Content Include="Scripts\amchart\xy.js" />
+    <Content Include="Scripts\bootstrap-table.css" />
+    <Content Include="Scripts\bootstrap-table.js" />
+    <Content Include="Scripts\bootstrap-tagsinput.css" />
+    <Content Include="Scripts\bootstrap-tagsinput.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\amchart\plugins\animate\bower.json" />
+    <Content Include="Scripts\amchart\plugins\animate\LICENSE" />
+    <Content Include="Scripts\amchart\plugins\animate\package.json" />
+    <Content Include="Scripts\amchart\plugins\animate\README.md" />
+    <Content Include="Scripts\amchart\plugins\dataloader\bower.json" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\data\gantt.json" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\data\gauge.json" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\data\map.json" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\data\map_areas.json" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\data\MSFT.csv" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\data\MSFT_events.csv" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\data\pie.csv" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\data\pie.json" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\data\serial.csv" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\data\serial.json" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\data\serial2.json" />
+    <Content Include="Scripts\amchart\plugins\dataloader\examples\data\TXN.csv" />
+    <Content Include="Scripts\amchart\plugins\dataloader\package.json" />
+    <Content Include="Scripts\amchart\plugins\dataloader\readme.md" />
+    <Content Include="Scripts\amchart\plugins\export\bower.json" />
+    <Content Include="Scripts\amchart\plugins\export\libs\pdfmake\pdfmake.min.js.map" />
+    <Content Include="Scripts\amchart\plugins\export\libs\xlsx\LICENSE" />
+    <Content Include="Scripts\amchart\plugins\export\libs\xlsx\xlsx.min.map" />
+    <Content Include="Scripts\amchart\plugins\export\LICENSE" />
+    <Content Include="Scripts\amchart\plugins\export\package.json" />
+    <Content Include="Scripts\amchart\plugins\export\README.md" />
+    <Content Include="Scripts\amchart\plugins\responsive\bower.json" />
+    <Content Include="Scripts\amchart\plugins\responsive\package.json" />
+    <Content Include="Scripts\amchart\plugins\responsive\readme.md" />
+    <Content Include="Scripts\amchart\plugins\responsive\responsive.min.js.map" />
+    <Content Include="Content\assets\.DS_Store" />
+    <Content Include="Content\assets\img\.DS_Store" />
+    <Content Include="Content\assets\less\theme-blue.less" />
+    <Content Include="Content\assets\less\theme-dark.less" />
+    <Content Include="Content\assets\less\theme-default.less" />
+    <Content Include="Content\assets\less\theme-green.less" />
+    <Content Include="Content\assets\less\theme-orange.less" />
+    <Content Include="Content\assets\less\theme-pink.less" />
+    <Content Include="Content\assets\less\theme-purple.less" />
+    <Content Include="Content\assets\less\theme-red.less" />
+    <Content Include="Content\assets\less\theme-yellow.less" />
+    <Content Include="Content\images\.DS_Store" />
+    <Content Include="Content\images\images.rar" />
+    <Content Include="Content\vendor\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\vendor\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\vendor\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\vendor\fonts\FontAwesome.otf" />
+    <Content Include="Content\vendor\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\vendor\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\vendor\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\vendor\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\vendor\plugins\form\drag-drop-uploader\upload.php" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\charts\StepChart.js" />
+    <Content Include="Scripts\charts\StepChart1.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.11.2.js" />
+    <Content Include="Scripts\jquery-1.11.2.min.js" />
+    <Content Include="Scripts\jquery.blockui.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\kendo.all.min.js" />
+    <Content Include="Scripts\landing_page.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Pdf\HTMLtoCanvas.js" />
+    <Content Include="Scripts\Pdf\jquery.plugin.html2canvas.js" />
+    <Content Include="Scripts\Print\canvg.js" />
+    <Content Include="Scripts\Print\html2canvas.js" />
+    <Content Include="Scripts\Print\jquery.1.11.2.min.js" />
+    <Content Include="Scripts\Print\jspdf.min.js" />
+    <Content Include="Scripts\Print\rgbcolor.js" />
+    <Content Include="Scripts\Print\StackBlur.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\tiny_mce\langs\en.js" />
+    <Content Include="Scripts\tiny_mce\license.txt" />
+    <Content Include="Scripts\tiny_mce\plugins\advhr\css\advhr.css" />
+    <Content Include="Scripts\tiny_mce\plugins\advhr\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advhr\js\rule.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advhr\rule.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\advimage\css\advimage.css" />
+    <Content Include="Scripts\tiny_mce\plugins\advimage\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advimage\image.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\advimage\js\image.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advlink\css\advlink.css" />
+    <Content Include="Scripts\tiny_mce\plugins\advlink\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advlink\js\advlink.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advlink\link.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\advlist\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\advlist\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\autolink\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\autolink\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\autoresize\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\autoresize\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\autosave\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\directionality\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\emotions.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\js\emotions.js" />
+    <Content Include="Scripts\tiny_mce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\example\dialog.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\example\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\example\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\example\img\example.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\example\js\dialog.js" />
+    <Content Include="Scripts\tiny_mce\plugins\example\langs\en.js" />
+    <Content Include="Scripts\tiny_mce\plugins\example\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\example_dependency\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\example_dependency\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="Scripts\tiny_mce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullpage\fullpage.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\iespell\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="Scripts\tiny_mce\plugins\inlinepopups\template.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\layer\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\legacyoutput\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\legacyoutput\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\lists\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\lists\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\media\css\media.css" />
+    <Content Include="Scripts\tiny_mce\plugins\media\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\media\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\media\js\embed.js" />
+    <Content Include="Scripts\tiny_mce\plugins\media\js\media.js" />
+    <Content Include="Scripts\tiny_mce\plugins\media\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\media\media.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\media\moxieplayer.swf" />
+    <Content Include="Scripts\tiny_mce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\js\pastetext.js" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\js\pasteword.js" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\pastetext.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\paste\pasteword.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\preview\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\preview\example.html" />
+    <Content Include="Scripts\tiny_mce\plugins\preview\preview.html" />
+    <Content Include="Scripts\tiny_mce\plugins\print\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\print\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\save\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\save\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="Scripts\tiny_mce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="Scripts\tiny_mce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\spellchecker\css\content.css" />
+    <Content Include="Scripts\tiny_mce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="Scripts\tiny_mce\plugins\style\css\props.css" />
+    <Content Include="Scripts\tiny_mce\plugins\style\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\style\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\style\js\props.js" />
+    <Content Include="Scripts\tiny_mce\plugins\style\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\style\props.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\style\readme.txt" />
+    <Content Include="Scripts\tiny_mce\plugins\tabfocus\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\tabfocus\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="Scripts\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="Scripts\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="Scripts\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\table\row.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\table\table.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\template\blank.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\template\css\template.css" />
+    <Content Include="Scripts\tiny_mce\plugins\template\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\template\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\template\js\template.js" />
+    <Content Include="Scripts\tiny_mce\plugins\template\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\plugins\template\template.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="Scripts\tiny_mce\plugins\visualblocks\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\visualblocks\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\wordcount\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\wordcount\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="Scripts\tiny_mce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\flash.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\iframe.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\pagebreak.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\quicktime.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\realmedia.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\shockwave.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\trans.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\video.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\img\windowsmedia.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\shortcuts.htm" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\highcontrast\content.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\highcontrast\dialog.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\highcontrast\ui.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="Scripts\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="Scripts\tiny_mce\themes\simple\editor_template.js" />
+    <Content Include="Scripts\tiny_mce\themes\simple\editor_template_src.js" />
+    <Content Include="Scripts\tiny_mce\themes\simple\img\icons.gif" />
+    <Content Include="Scripts\tiny_mce\themes\simple\langs\en.js" />
+    <Content Include="Scripts\tiny_mce\themes\simple\skins\default\content.css" />
+    <Content Include="Scripts\tiny_mce\themes\simple\skins\default\ui.css" />
+    <Content Include="Scripts\tiny_mce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="Scripts\tiny_mce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="Scripts\tiny_mce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="Scripts\tiny_mce\tiny_mce.js" />
+    <Content Include="Scripts\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="Scripts\tiny_mce\tiny_mce_src.js" />
+    <Content Include="Scripts\tiny_mce\utils\editable_selects.js" />
+    <Content Include="Scripts\tiny_mce\utils\form_utils.js" />
+    <Content Include="Scripts\tiny_mce\utils\mctabs.js" />
+    <Content Include="Scripts\tiny_mce\utils\validate.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\assets\img\drag-drop-uploads\" />
+    <Folder Include="Scripts\tiny_mce\plugins\advimage\img\" />
+    <Folder Include="Scripts\tiny_mce\plugins\preview\jscripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>25269</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:25269/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
